@@ -1,7 +1,7 @@
 hash-threshold 8
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,8666,2855.45,'beulz',9200,2438.37,'nnsnf')
@@ -3004,7 +3004,7 @@ statement ok
 INSERT INTO tab0 VALUES(999,4553,5969.44,'xnacc',6991,7673.12,'qfhpj')
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -3022,10 +3022,10 @@ statement ok
 INSERT INTO tab1 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col3 DESC)
+CREATE INDEX idx_tab2_0 ON tab2 (col3 DESC)
 
 statement ok
 CREATE INDEX idx_tab2_2 ON tab2 (col4 DESC)
@@ -3034,10 +3034,10 @@ statement ok
 INSERT INTO tab2 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col0 DESC,col3 DESC,col1 DESC)
+CREATE INDEX idx_tab3_0 ON tab3 (col0 DESC,col3 DESC,col1 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_1 ON tab3 (col1)
@@ -3046,13 +3046,13 @@ statement ok
 INSERT INTO tab3 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col0,col3)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col3,col1,col4 DESC)
+CREATE INDEX idx_tab4_2 ON tab4 (col3,col1,col4 DESC)
 
 statement ok
 CREATE INDEX idx_tab4_3 ON tab4 (col3,col4 DESC,col1 DESC)
@@ -3446,7 +3446,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,2758,4364.86,'ixhdb',1477,3580.56,'oyvft')
@@ -6452,7 +6452,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -6473,10 +6473,10 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col4 DESC,col3)
+CREATE INDEX idx_tab2_0 ON tab2 (col4 DESC,col3)
 
 statement ok
 CREATE INDEX idx_tab2_1 ON tab2 (col0)
@@ -6494,10 +6494,10 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1 DESC)
+CREATE INDEX idx_tab3_0 ON tab3 (col1 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_1 ON tab3 (col0 DESC)
@@ -6512,13 +6512,13 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col3 DESC)
+CREATE INDEX idx_tab4_0 ON tab4 (col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col4 DESC)
+CREATE INDEX idx_tab4_1 ON tab4 (col4 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -6766,7 +6766,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,879,1836.77,'lfquw',6826,8673.54,'awlys')
@@ -9772,7 +9772,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -9793,13 +9793,13 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4 DESC,col1,col3)
+CREATE INDEX idx_tab2_1 ON tab2 (col4 DESC,col1,col3)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col0 DESC)
+CREATE INDEX idx_tab2_2 ON tab2 (col0 DESC)
 
 statement ok
 INSERT INTO tab2 SELECT * FROM tab0
@@ -9808,13 +9808,13 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1)
+CREATE INDEX idx_tab3_0 ON tab3 (col1)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col3,col0)
+CREATE INDEX idx_tab3_1 ON tab3 (col3,col0)
 
 statement ok
 CREATE INDEX idx_tab3_2 ON tab3 (col4 DESC,col0,col3)
@@ -9829,16 +9829,16 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col0,col4)
+CREATE INDEX idx_tab4_1 ON tab4 (col0,col4)
 
 statement ok
 CREATE INDEX idx_tab4_2 ON tab4 (col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3)
+CREATE INDEX idx_tab4_3 ON tab4 (col3)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -10026,7 +10026,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,9232,1626.42,'eitrv',4385,5101.34,'pkgdt')
@@ -13032,7 +13032,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -13053,13 +13053,13 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab2_0 ON tab2 (col0)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col3 DESC)
+CREATE INDEX idx_tab2_1 ON tab2 (col3 DESC)
 
 statement ok
 CREATE INDEX idx_tab2_5 ON tab2 (col4 DESC,col1)
@@ -13071,13 +13071,13 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col0 DESC)
+CREATE INDEX idx_tab3_0 ON tab3 (col0 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_3 ON tab3 (col3 DESC)
+CREATE INDEX idx_tab3_3 ON tab3 (col3 DESC)
 
 statement ok
 INSERT INTO tab3 SELECT * FROM tab0
@@ -13086,7 +13086,7 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col1)
@@ -13520,7 +13520,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,5203,6660.69,'awdrn',8056,4416.17,'ayryd')
@@ -16526,7 +16526,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -16547,7 +16547,7 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab2_0 ON tab2 (col3 DESC,col0)
@@ -16565,16 +16565,16 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1)
+CREATE INDEX idx_tab3_0 ON tab3 (col1)
 
 statement ok
 CREATE INDEX idx_tab3_3 ON tab3 (col4,col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col0 DESC,col4)
+CREATE INDEX idx_tab3_4 ON tab3 (col0 DESC,col4)
 
 statement ok
 INSERT INTO tab3 SELECT * FROM tab0
@@ -16583,13 +16583,13 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col3)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col1,col4 DESC)
+CREATE INDEX idx_tab4_1 ON tab4 (col1,col4 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -16722,7 +16722,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,8366,4778.30,'cyhkh',2099,6424.34,'dthbl')
@@ -19728,7 +19728,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -19749,13 +19749,13 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col3 DESC)
+CREATE INDEX idx_tab2_0 ON tab2 (col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_4 ON tab2 (col0 DESC)
+CREATE INDEX idx_tab2_4 ON tab2 (col0 DESC)
 
 statement ok
 INSERT INTO tab2 SELECT * FROM tab0
@@ -19764,7 +19764,7 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab3_1 ON tab3 (col1 DESC,col0 DESC)
@@ -19779,13 +19779,13 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col1 DESC)
+CREATE INDEX idx_tab4_0 ON tab4 (col1 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col3 DESC,col0 DESC)
+CREATE INDEX idx_tab4_2 ON tab4 (col3 DESC,col0 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -20158,7 +20158,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,9054,8106.68,'uhxot',9313,2674.10,'zyoml')
@@ -23164,7 +23164,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -23185,13 +23185,13 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col0 DESC,col3 DESC)
+CREATE INDEX idx_tab2_0 ON tab2 (col0 DESC,col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4 DESC)
+CREATE INDEX idx_tab2_1 ON tab2 (col4 DESC)
 
 statement ok
 CREATE INDEX idx_tab2_4 ON tab2 (col1)
@@ -23203,7 +23203,7 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab3_0 ON tab3 (col4 DESC)
@@ -23221,16 +23221,16 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col4 DESC,col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_2 ON tab4 (col1 DESC,col0)
+CREATE INDEX idx_tab4_2 ON tab4 (col1 DESC,col0)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col0 DESC,col3 DESC)
+CREATE INDEX idx_tab4_3 ON tab4 (col0 DESC,col3 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -23538,7 +23538,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,7334,4140.89,'hanzt',5644,6462.1,'nkklb')
@@ -26544,7 +26544,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -26565,16 +26565,16 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab2_0 ON tab2 (col3,col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col0 DESC)
+CREATE INDEX idx_tab2_1 ON tab2 (col0 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col4)
+CREATE INDEX idx_tab2_2 ON tab2 (col4)
 
 statement ok
 INSERT INTO tab2 SELECT * FROM tab0
@@ -26583,13 +26583,13 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1)
+CREATE INDEX idx_tab3_0 ON tab3 (col1)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col4)
+CREATE INDEX idx_tab3_1 ON tab3 (col4)
 
 statement ok
 INSERT INTO tab3 SELECT * FROM tab0
@@ -26598,19 +26598,19 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_0 ON tab4 (col0,col4)
+CREATE INDEX idx_tab4_0 ON tab4 (col0,col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col1,col0 DESC)
+CREATE INDEX idx_tab4_1 ON tab4 (col1,col0 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3 DESC,col1)
+CREATE INDEX idx_tab4_3 ON tab4 (col3 DESC,col1)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_4 ON tab4 (col4)
+CREATE INDEX idx_tab4_4 ON tab4 (col4)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -26623,7 +26623,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,3482,9536.12,'zqifw',2377,7696.24,'wkbfn')
@@ -29629,7 +29629,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -29650,19 +29650,19 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab2_0 ON tab2 (col1,col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col4)
+CREATE INDEX idx_tab2_1 ON tab2 (col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col0 DESC)
+CREATE INDEX idx_tab2_2 ON tab2 (col0 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_5 ON tab2 (col3)
+CREATE INDEX idx_tab2_5 ON tab2 (col3)
 
 statement ok
 INSERT INTO tab2 SELECT * FROM tab0
@@ -29671,16 +29671,16 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col1)
+CREATE INDEX idx_tab3_0 ON tab3 (col1)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col0 DESC)
+CREATE INDEX idx_tab3_1 ON tab3 (col0 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_3 ON tab3 (col4)
+CREATE INDEX idx_tab3_3 ON tab3 (col4)
 
 statement ok
 INSERT INTO tab3 SELECT * FROM tab0
@@ -29689,13 +29689,13 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col1)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_3 ON tab4 (col3 DESC)
+CREATE INDEX idx_tab4_3 ON tab4 (col3 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -29828,7 +29828,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,4981,3737.81,'jenum',8679,1940.18,'zvpyq')
@@ -32834,7 +32834,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -32855,16 +32855,16 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col0,col4)
+CREATE INDEX idx_tab2_0 ON tab2 (col0,col4)
 
 statement ok
 CREATE INDEX idx_tab2_1 ON tab2 (col3,col0)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_3 ON tab2 (col0 DESC,col3)
+CREATE INDEX idx_tab2_3 ON tab2 (col0 DESC,col3)
 
 statement ok
 INSERT INTO tab2 SELECT * FROM tab0
@@ -32873,19 +32873,19 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col4 DESC,col3)
+CREATE INDEX idx_tab3_1 ON tab3 (col4 DESC,col3)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_2 ON tab3 (col0,col3 DESC,col4 DESC)
+CREATE INDEX idx_tab3_2 ON tab3 (col0,col3 DESC,col4 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_3 ON tab3 (col3,col1 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col1,col3 DESC)
+CREATE INDEX idx_tab3_4 ON tab3 (col1,col3 DESC)
 
 statement ok
 INSERT INTO tab3 SELECT * FROM tab0
@@ -32894,19 +32894,19 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col0 DESC,col1 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col3)
+CREATE INDEX idx_tab4_1 ON tab4 (col3)
 
 statement ok
 CREATE INDEX idx_tab4_2 ON tab4 (col0,col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col1 DESC,col4 DESC)
+CREATE INDEX idx_tab4_5 ON tab4 (col1 DESC,col4 DESC)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0
@@ -32919,7 +32919,7 @@ statement ok
 DROP TABLE tab0
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,7921,3893.12,'uicbl',3348,3188.94,'qmbfv')
@@ -35925,7 +35925,7 @@ statement ok
 DROP TABLE tab1
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -35946,10 +35946,10 @@ statement ok
 DROP TABLE tab2
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col3,col0 DESC)
+CREATE INDEX idx_tab2_1 ON tab2 (col3,col0 DESC)
 
 statement ok
 CREATE INDEX idx_tab2_2 ON tab2 (col4)
@@ -35961,22 +35961,22 @@ statement ok
 DROP TABLE tab3
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab3_0 ON tab3 (col0 DESC,col1 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_1 ON tab3 (col1,col4)
+CREATE INDEX idx_tab3_1 ON tab3 (col1,col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_2 ON tab3 (col3)
+CREATE INDEX idx_tab3_2 ON tab3 (col3)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_4 ON tab3 (col1 DESC,col0)
+CREATE INDEX idx_tab3_4 ON tab3 (col1 DESC,col0)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_5 ON tab3 (col4)
+CREATE INDEX idx_tab3_5 ON tab3 (col4)
 
 statement ok
 INSERT INTO tab3 SELECT * FROM tab0
@@ -35985,13 +35985,13 @@ statement ok
 DROP TABLE tab4
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_5 ON tab4 (col0 DESC,col1)
+CREATE INDEX idx_tab4_5 ON tab4 (col0 DESC,col1)
 
 statement ok
 INSERT INTO tab4 SELECT * FROM tab0

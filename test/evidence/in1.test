@@ -111,7 +111,7 @@ SELECT null NOT IN (SELECT * FROM t1)
 1
 
 statement ok
-CREATE TABLE t2(y INTEGER PRIMARY KEY)
+CREATE TABLE t2(y INTEGER )
 
 onlyif sqlite
 query I nosort label-5
@@ -360,7 +360,7 @@ statement ok
 CREATE TABLE t4(a INTEGER UNIQUE)
 
 statement ok
-CREATE TABLE t5(b INTEGER PRIMARY KEY)
+CREATE TABLE t5(b INTEGER )
 
 statement ok
 CREATE TABLE t6(c INTEGER)

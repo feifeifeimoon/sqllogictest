@@ -1,7 +1,7 @@
 hash-threshold 8
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,99,88.31,'gsysp',98,54.24,'gswhk')
@@ -34,7 +34,7 @@ statement ok
 INSERT INTO tab0 VALUES(9,5,93.89,'nswkq',16,88.23,'obsmj')
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -52,22 +52,22 @@ statement ok
 INSERT INTO tab1 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col4)
+CREATE INDEX idx_tab2_0 ON tab2 (col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_3 ON tab2 (col3,col0 DESC)
+CREATE INDEX idx_tab2_3 ON tab2 (col3,col0 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_4 ON tab2 (col1 DESC)
+CREATE INDEX idx_tab2_4 ON tab2 (col1 DESC)
 
 statement ok
 INSERT INTO tab2 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab3_0 ON tab3 (col1)
@@ -82,7 +82,7 @@ statement ok
 INSERT INTO tab3 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab4_0 ON tab4 (col3 DESC,col1)

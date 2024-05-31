@@ -1,7 +1,7 @@
 hash-threshold 8
 
 statement ok
-CREATE TABLE tab0(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab0(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 INSERT INTO tab0 VALUES(0,964111,594512.41,'zejml',44799,387786.46,'yupyp')
@@ -3004,7 +3004,7 @@ statement ok
 INSERT INTO tab0 VALUES(999,162414,341156.26,'urwlr',478912,650451.84,'rtujv')
 
 statement ok
-CREATE TABLE tab1(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab1(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
 CREATE INDEX idx_tab1_0 on tab1 (col0)
@@ -3022,16 +3022,16 @@ statement ok
 INSERT INTO tab1 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab2(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab2(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_0 ON tab2 (col0 DESC,col1,col4)
+CREATE INDEX idx_tab2_0 ON tab2 (col0 DESC,col1,col4)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_1 ON tab2 (col3 DESC)
+CREATE INDEX idx_tab2_1 ON tab2 (col3 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab2_2 ON tab2 (col1 DESC)
+CREATE INDEX idx_tab2_2 ON tab2 (col1 DESC)
 
 statement ok
 CREATE INDEX idx_tab2_3 ON tab2 (col4)
@@ -3040,16 +3040,16 @@ statement ok
 INSERT INTO tab2 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab3(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab3(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_0 ON tab3 (col0 DESC,col3 DESC)
+CREATE INDEX idx_tab3_0 ON tab3 (col0 DESC,col3 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_1 ON tab3 (col3,col0,col1 DESC)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab3_3 ON tab3 (col1 DESC,col3 DESC)
+CREATE INDEX idx_tab3_3 ON tab3 (col1 DESC,col3 DESC)
 
 statement ok
 CREATE INDEX idx_tab3_5 ON tab3 (col4,col1)
@@ -3058,10 +3058,10 @@ statement ok
 INSERT INTO tab3 SELECT * FROM tab0
 
 statement ok
-CREATE TABLE tab4(pk INTEGER PRIMARY KEY, col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
+CREATE TABLE tab4(pk INTEGER , col0 INTEGER, col1 FLOAT, col2 TEXT, col3 INTEGER, col4 FLOAT, col5 TEXT)
 
 statement ok
-CREATE UNIQUE INDEX idx_tab4_1 ON tab4 (col4 DESC)
+CREATE INDEX idx_tab4_1 ON tab4 (col4 DESC)
 
 statement ok
 CREATE INDEX idx_tab4_2 ON tab4 (col1,col0)
