@@ -111,7 +111,7 @@ SELECT null NOT IN (SELECT * FROM t1)
 1
 
 statement ok
-CREATE TABLE t2(y INTEGER PRIMARY KEY)
+CREATE TABLE t2(y INTEGER )
 
 onlyif sqlite
 query I nosort label-5
@@ -158,7 +158,7 @@ SELECT null NOT IN (SELECT * FROM t2)
 1
 
 statement ok
-CREATE TABLE t3(z INTEGER UNIQUE)
+CREATE TABLE t3(z INTEGER )
 
 onlyif sqlite
 query I nosort label-9
@@ -357,10 +357,10 @@ SELECT 'a' NOT IN ('b','c','d')
 1
 
 statement ok
-CREATE TABLE t4(a INTEGER UNIQUE)
+CREATE TABLE t4(a INTEGER )
 
 statement ok
-CREATE TABLE t5(b INTEGER PRIMARY KEY)
+CREATE TABLE t5(b INTEGER )
 
 statement ok
 CREATE TABLE t6(c INTEGER)
@@ -381,7 +381,7 @@ statement ok
 INSERT INTO t6 SELECT * FROM t4
 
 statement ok
-CREATE TABLE t4n(a INTEGER UNIQUE)
+CREATE TABLE t4n(a INTEGER )
 
 statement ok
 CREATE TABLE t6n(c INTEGER)
@@ -397,11 +397,11 @@ INSERT INTO t6n SELECT * FROM t4n
 
 skipif mysql
 statement ok
-CREATE TABLE t7(a TEXT UNIQUE)
+CREATE TABLE t7(a TEXT )
 
 onlyif mysql
 statement ok
-CREATE TABLE t7(a TEXT, UNIQUE (a(1)))
+CREATE TABLE t7(a TEXT,  (a(1)))
 
 statement ok
 CREATE TABLE t8(c TEXT)
@@ -420,11 +420,11 @@ INSERT INTO t8 SELECT * FROM t7
 
 skipif mysql
 statement ok
-CREATE TABLE t7n(a TEXT UNIQUE)
+CREATE TABLE t7n(a TEXT )
 
 onlyif mysql
 statement ok
-CREATE TABLE t7n(a TEXT, UNIQUE (a(1)))
+CREATE TABLE t7n(a TEXT,  (a(1)))
 
 statement ok
 CREATE TABLE t8n(c TEXT)

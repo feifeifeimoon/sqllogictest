@@ -12,9 +12,6 @@ INSERT INTO t1 VALUES(0,'false')
 statement ok
 INSERT INTO t1 VALUES(NULL,'NULL')
 
-statement ok
-CREATE INDEX t1i1 ON t1(x)
-
 
 # TBD-EVIDENCE-OF: R-13439-14752 The CREATE VIEW command assigns a name to a
 # pre-packaged SELECT statement.

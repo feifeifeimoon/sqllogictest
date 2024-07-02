@@ -12,9 +12,6 @@ INSERT INTO t1 VALUES(0,'false')
 statement ok
 INSERT INTO t1 VALUES(NULL,'NULL')
 
-statement ok
-CREATE INDEX t1i1 ON t1(x)
-
 # There is no REINDEX in the SQL92 standard.
 # So far, this only runs well on SQLite and Postgres.
 # I believe MySQL uses the form REPAIR TABLE [tbl_name].

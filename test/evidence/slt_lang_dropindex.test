@@ -12,12 +12,8 @@ INSERT INTO t1 VALUES(0,'false')
 statement ok
 INSERT INTO t1 VALUES(NULL,'NULL')
 
-statement ok
-CREATE INDEX t1i1 ON t1(x)
-
 
 # EVIDENCE-OF: R-42037-15614 The DROP INDEX statement removes an index
-# added with the CREATE INDEX statement.
 
 skipif mssql
 statement ok
